@@ -1,0 +1,138 @@
+body {
+  margin: 40px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+
+}
+
+.header {
+  grid-area: header;
+  color: white;
+  /*display: inline-block;*/
+}
+
+.footer {
+  grid-area: footer;
+  color: white;
+}
+
+.footer p{
+  text-align: center;
+}
+
+
+
+.wrapper {
+        display: grid;
+        grid-gap: 10px;
+        /*grid-template-columns: 200px 200px 200px;*/
+        grid-template-areas:
+        "header  header  header"
+        "sidebar content content"
+        "sidebar2 content content"
+        /*"content content content"*/
+        /*"content content content"*/
+
+
+        "footer  footer  footer";
+        background-color: #fff;
+        color: #444;
+    }
+
+
+    @media screen and (max-width: 600px) {
+      .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        /*grid-template-columns: 200px 200px 200px;*/
+        grid-template-areas:
+        "header  header  header"
+        "sidebar sidebar sidebar"
+        "content content content"
+        /*"content content content"*/
+        /*"content content content"*/
+
+
+        "footer  footer  footer";
+        background-color: #fff;
+        color: #444;
+    }
+
+    }
+
+
+.box {
+  /*background-color: #444;*/
+  /*color: #fff;*/
+  border-radius: 5px;
+  padding: 50px;
+  font-size: 150%;
+}
+
+.header,
+.footer {
+  background-color: rgb(193,68,14);
+}
+
+.header h1{
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sidebar .current_data img{
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.sidebar .current_data p{
+  /*text-transform: uppercase;*/
+
+}
+
+.content .chart{
+  padding: 10px;
+}
+
+.header img{
+  width: 10%;
+  margin: 20px;
+}
+
+h1{
+  text-transform: uppercase;
+  font-weight: bold;
+}
